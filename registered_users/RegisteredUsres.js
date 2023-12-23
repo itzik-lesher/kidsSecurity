@@ -12,19 +12,19 @@ function RegisteredUsers() {
       //console.log(
       //  "result fetching users in RegisteredUsers.js AAAAAAAAAA = " +
       //    JSON.stringify(regUsers.rows._array, null, 2)
-      );
+      //);
       //console.log(
       //  "allContext.setRegsiteredUsersCtx(regUsers.rows._array) in in RegisteredUsers.js"
-      );
+      //);
       allContext.setRegsiteredUsersCtx(regUsers.rows._array);
     }
     fechUsers();
   }, []);
 
   //console.log(
-   // "registeredUsers in RegistedUsers =" +
-   //   JSON.stringify(allContext.setRegsiteredUsersCtx, null, 2)
-  );
+  // "registeredUsers in RegistedUsers =" +
+  //   JSON.stringify(allContext.setRegsiteredUsersCtx, null, 2)
+  //);
   const usersList = (
     <>
       <ScrollView>
