@@ -2,9 +2,11 @@ import { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Button, View, Alert, Platform } from "react-native";
 import * as Notifications from "expo-notifications";
+import Constants from "expo-constants";
 
 Notifications.setNotificationHandler({
   handleNotification: async () => {
+    console.log("Receiving Notification");
     return {
       shouldPlaySound: false,
       shouldSetBadge: false,
@@ -34,7 +36,8 @@ export default function App() {
       }
 
       const pushTokenData = await Notifications.getExpoPushTokenAsync();
-      console.log(pushTokenData);
+
+      console.log(JSON.stringify(pushTokenData), null, 2);
 
       if (Platform.OS === "android") {
         Notifications.setNotificationChannelAsync("default", {
